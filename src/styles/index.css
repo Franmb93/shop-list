@@ -72,7 +72,13 @@ input {
 
 .add-form button {
   text-transform: uppercase;
-  background-color: var(--light-color);
+  background-color: var(--list-color);
+  color: var(--light-color);
+}
+
+.add-form button:hover {
+  background-color: var(--main-color);
+  color: var(--list-color);
 }
 
 .list {

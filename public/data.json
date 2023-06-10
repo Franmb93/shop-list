@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "description": "Leche",
+    "quantity": 2,
+    "packed": false
+  },
+  {
+    "id": 2,
+    "description": "Pan",
+    "quantity": 1,
+    "packed": true
+  },
+  {
+    "id": 3,
+    "description": "Huevos",
+    "quantity": 12,
+    "packed": false
+  },
+  {
+    "id": 4,
+    "description": "Arroz",
+    "quantity": 1,
+    "packed": false
+  },
+  {
+    "id": 5,
+    "description": "Frijoles",
+    "quantity": 2,
+    "packed": true
+  },
+  {
+    "id": 6,
+    "description": "Carne de res",
+    "quantity": 3,
+    "packed": false
+  },
+  {
+    "id": 7,
+    "description": "Pollo",
+    "quantity": 2,
+    "packed": true
+  },
+  {
+    "id": 8,
+    "description": "Pescado",
+    "quantity": 4,
+    "packed": false
+  },
+  {
+    "id": 9,
+    "description": "Papas",
+    "quantity": 5,
+    "packed": false
+  },
+  {
+    "id": 10,
+    "description": "Cebollas",
+    "quantity": 3,
+    "packed": true
+  }
+]
