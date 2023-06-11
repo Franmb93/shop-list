@@ -4,7 +4,7 @@ export default function Item({ item, onDeleteItem, onToggleItem }) {
       <input
         type="checkbox"
         checked={item.packed}
-        onClick={() => onToggleItem(item.id)}
+        onChange={() => onToggleItem(item.id)}
       />
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.description}

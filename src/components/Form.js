@@ -1,7 +1,12 @@
 import { useState } from "react";
 
 export default function Form({ onAddItems }) {
-  const [newItem, setNewItem] = useState({ quantity: 1, description: "" });
+  const [newItem, setNewItem] = useState({
+    quantity: 1,
+    description: "",
+    packed: false,
+    id: "",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -9,10 +14,12 @@ export default function Form({ onAddItems }) {
     if (!newItem.description) return;
     if (newItem.quantity < 1) return;
 
-    setNewItem({ ...newItem, packed: false, id: Date.now() });
-    onAddItems(newItem);
+    const submitedItem = { ...newItem, packed: false, id: Date.now() };
 
-    setNewItem({ quantity: 1, description: "" });
+    setNewItem(submitedItem);
+    onAddItems(submitedItem);
+
+    setNewItem({ quantity: 1, description: "", packed: false, id: "" });
   };
 
   return (
