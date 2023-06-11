@@ -29,6 +29,10 @@ function App() {
     );
   }
 
+  function handleClearItems() {
+    setItems([]);
+  }
+
   useEffect(() => {
     if (
       process.env.NODE_ENV !== "production" &&
@@ -46,6 +50,7 @@ function App() {
         items={items}
         onDeleteItem={handleDeleteItem}
         onToggleItem={handleToggleItem}
+        onClearItems={handleClearItems}
       ></ShoppingList>
       <Statistics items={items}></Statistics>
     </div>
