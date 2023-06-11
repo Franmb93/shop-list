@@ -1,19 +1,15 @@
-import { useState } from "react";
-
-export default function Item({ item }) {
-  const [packed, setPacked] = useState(item.packed);
-
+export default function Item({ item, onDeleteItem, onToggleItem }) {
   return (
     <li>
       <input
         type="checkbox"
-        checked={packed}
-        onClick={() => setPacked((curPacked) => !curPacked)}
+        checked={item.packed}
+        onClick={() => onToggleItem(item.id)}
       />
-      <span style={packed ? { textDecoration: "line-through" } : {}}>
+      <span style={item.packed ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.description}
       </span>
-      <button>❌</button>
+      <button onClick={() => onDeleteItem(item.id)}>❌</button>
     </li>
   );
 }
