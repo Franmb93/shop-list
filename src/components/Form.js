@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Form() {
+export default function Form({ onAddItems }) {
   const [newItem, setNewItem] = useState({ quantity: 1, description: "" });
 
   const handleSubmit = (e) => {
@@ -10,6 +10,7 @@ export default function Form() {
     if (newItem.quantity < 1) return;
 
     setNewItem({ ...newItem, packed: false, id: Date.now() });
+    onAddItems(newItem);
 
     setNewItem({ quantity: 1, description: "" });
   };
@@ -24,7 +25,9 @@ export default function Form() {
         }}
       >
         {Array.from({ length: 10 }, (_, i) => i + 1).map((number) => (
-          <option value={number}>{number}</option>
+          <option key={number} value={number}>
+            {number}
+          </option>
         ))}
       </select>
       <input
